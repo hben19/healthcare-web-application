@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    include includes/header-patient
+    link(rel="stylesheet" href="css/medical-event.css")
+    .container
+        .dashboard
+            .edit
+                a.edit(href=`edit-medical-event?event_id=${event_id}`) 
+                    i.far.fa-edit
+                    span Edit
+            .event_id
+                label Event ID:
+                    span=event_id
+            .name
+                label Patient:
+                    span #{patient.firstname + ' ' + patient.surname}
+            .date
+                label Date:
+                    span=moment(date).format('D MMMM YYYY')
+            .doctor
+                label Treating Doctor and GMC number:
+                    span #{doctor_firstname + ' ' + doctor_surname + ', ' + gmc}
+            .short_description
+                label Short Description: 
+                p=short_description
+            .long_description
+                label Long Description:
+                p=long_description

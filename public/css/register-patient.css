@@ -1,0 +1,153 @@
+form {
+    margin-left: 17%;
+    margin-right: 17%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: left;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    display: block;
+}
+
+input, select, textarea {
+    width: 100%; 
+    padding: 12px;   
+    border: 1px solid #c55252; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+    background: rgb(241, 235, 235,.7);
+    font-size: 15px;
+    color: maroon;
+    font-weight: 350;
+}
+
+select{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 48px;
+    margin-top: 7px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border: 1px solid rgb(148, 1, 1);
+    background: white;
+    outline: 1px solid rgb(148, 1, 1);
+}
+
+textarea {
+  height: 120px;
+}
+
+::-webkit-input-placeholder {
+    color: #c55252;
+    font-size: 13px;
+    font-weight: 250;
+  
+}
+
+.name {
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+}
+
+.address {
+    width: 100%;
+    margin-bottom: 20px
+}
+
+.address input {
+    margin-bottom: 10px;
+}
+
+#city, #country{
+    width: 48%;
+}
+
+#country {
+    margin-right: 3.4%;
+}
+
+#postcode {
+    width: 48%;
+}
+
+.dob, .gender, .bloodtype{
+    width: 30%;
+    display: inline-block;
+}
+
+.dob, .gender {
+    margin-right: 4.3%;
+}
+
+.bloodtype {
+	margin-bottom: 10px;
+}
+
+#register-button {
+    appearance: none;
+	outline: 0;
+	border: 0;
+	padding: 10px 15px;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 18px;
+    background: linear-gradient(to top left, #f34b53 0%, #543332 130%);
+    color: white;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+    transition-duration: 0.5s;
+    margin-top: 20px;
+}
+
+#register-button:hover {
+    margin-left: 32%;
+    margin-right: 32%;
+    width: 36%;
+    background: linear-gradient(to top left, #543332 0, #f34b53 100%);
+    transition-duration: .5s;
+}
+
+.checks {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bpc {
+    width: 40%;
+    margin-right: 9%;
+    display: inline-block
+}
+
+.hrc {
+	float: right;
+    width: 40%;
+}
+
+.measures {
+    margin-bottom: 10px;
+}
+
+.height, .weight {
+    width: 40%;
+    display: inline-block;
+}
+
+.height {
+    margin-right: 19.3%;
+}
+
+.error p{
+	color: red;
+	margin-top: 5px;
+	font-size: 18;
+}

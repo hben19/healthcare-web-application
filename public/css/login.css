@@ -1,0 +1,166 @@
+body {
+	color: white;
+}
+
+.container
+{
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 80px 0;
+	height: 400px;
+	text-align: center;
+	background: transparent;
+	color: white;
+	border: 0px transparent;
+}
+
+#logo
+{
+	width: 360px;
+	opacity: 1;
+}
+
+#logo:hover 
+{
+	opacity: 0.8;
+}
+
+h1 
+{
+	padding-top: 10%;
+}
+
+h2
+{
+	padding-top: 5%;
+}
+
+form
+{
+	padding: 20px 0;
+	position: relative;
+	z-index: 2;
+}
+
+input
+{
+	display: block;
+	appearance: none;
+	outline: 0;
+	border: 1px solid rgba(255, 255, 255, 0.397);
+    background-color: rgba(255, 255, 255, 0.199);
+	width: 250px;
+	border-radius: 3px;
+	padding: 10px 15px;
+	margin: 0 auto 10px auto;
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	color: white;
+	transition-duration: 0.25s;
+    font-weight: 250;
+}
+		
+input:hover
+{
+    background-color: rgba(255, 255, 255, 0.404);
+}
+
+
+input:focus
+{
+	background-color: white;
+	width: 300px;
+    color: #f34b53;
+    opacity: 1;
+}
+
+input:-internal-autofill-selected
+{
+	display: block;
+	appearance: none;
+	outline: 0;
+	border: 1px solid rgba(255, 255, 255, 0.397);
+    background-color: rgba(255, 255, 255, 0.199);
+	width: 250px;
+	border-radius: 3px;
+	padding: 10px 15px;
+	margin: 0 auto 10px auto;
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	color: white;
+	transition-duration: 0.25s;
+    font-weight: 250;
+}
+
+::-webkit-input-placeholder {
+	color:white;
+	font-weight: 250;
+}
+
+button
+{
+	appearance: none;
+	outline: 0;
+	background-color: white;
+	border: solid 1px transparent;
+	padding: 10px 15px;
+	color: #543332;
+	border-radius: 3px;
+	width: 250px;
+	cursor: pointer;
+	font-size: 18px;
+    transition-duration: 0.25s;
+    margin-top: 10px;
+}
+		
+button:hover
+{
+	background: #ffffffd4;
+	width: 250px;
+    transition-duration: .5s;
+    
+}
+
+
+::-webkit-file-upload-button {
+    border: none;
+    background: white;
+}
+
+::-webkit-file-upload-button:hover {
+	cursor: pointer;
+	background: #ffffffeb;
+}
+
+.file_input {
+     width: 250px;
+     background: white;
+     margin-top: 20px;
+     color: #840101;
+     border-radius: 3px;
+  	white-space: nowrap;
+  	-webkit-user-select: none;
+  	cursor: pointer;
+  	text-shadow: 1px 1px #fff;
+  	font-weight: 700;
+  	font-size: 13px;
+
+}
+
+.file_input:hover {
+	background: #ffffffe6;
+	color: #840101;
+}
+
+.file_input:focus {
+	width: 250px;
+	background: white;
+	color: #840101;
+}
+
+.error p {
+	margin-top: 13px;
+	font-size: 19px;
+}

@@ -1,0 +1,63 @@
+form(method='post' action='/patient-registered')
+    .name
+        label Name
+        input#firstname(type='text' name='firstname' placeholder='First Name(s)' required='')
+        input#surname(type='text' name='surname' placeholder='Surname' required='')
+    label Email
+    if(message)
+        .error
+            p=message
+    input(type='email' name='email' required='' placeholder='email@address.com')
+    .address
+        label Address
+        input(type='text' name='address_line1' required='' placeholder='Address Line 1')
+        input(type='text' name='address_line2' required placeholder='Address Line 2')
+        input#country(type='text' name='country' required='' placeholder='Country')
+        input#city(type='text' name='city' required='' placeholder='City')
+        input#postcode(type='text' name='postcode' required='' placeholder='Postcode')
+    .dob
+        label Date of Birth
+        input(type='date' name='birth_date' required='')
+    .gender
+        label Gender
+        select#gender(name='gender' required='')
+            option(type='text' value='Male') Male
+            option(type='text' value='Female') Female
+    .bloodtype
+        label Blood type
+        select(type='text' name='blood_type' required='')
+            option(type='text' value='A+') A+
+            option(type='text' value='B+') B+
+            option(type='text' value='O+') O+
+            option(type='text' value='AB+') AB+
+            option(type='text' value='A-') A-
+            option(type='text' value='B-') B-
+            option(type='text' value='O-') O-
+            option(type='text' value='AB-') AB-
+    div
+        label Medical Condition
+        textarea(type='text' name='medical_condition' required='' placeholder='Describe detailed your patient medical condition..')
+    label Allergies
+    textarea(type='text' name='allergies' required='' placeholder='List your patient allergies..')
+    label Prescriptions
+    textarea(type='text' name='prescriptions' required='' placeholder='List your patient prescriptions..')
+    .checks
+        .bpc
+            label Blood Pressure Check
+            input(type='number' name='systolic' required='' placeholder='Systolic')
+            input(type='number' name='diastolic' required='' placeholder='Diastolic')
+        .hrc
+            label Heart Rate Check
+            input(type='number' name='heart_rate' placeholder='bpm' required='')
+    .measures
+        .height
+            label Height
+            input(type='number' name='height' required='' placeholder='cm')
+        .weight
+            label Weight
+            input(type='number' name='weight' required='' placeholder='kg')
+    label Smoker
+    select#smoker(name='smoker' required='')
+        option(type='text' value='No') No
+        option(type='text' value='Yes') Yes
+    button#register-button(type='submit') Submit

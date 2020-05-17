@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    link(rel="stylesheet" href="css/add-medical-event.css")
+    link(rel="stylesheet" href="css/register-form.css")
+    include includes/header-patient
+    .container
+        h2 Add Medical Event
+        .form-container
+            form(method="post" action="/medical-event-added")
+                label Short Description
+                input#short_description(type='text' name='shortDescription' required='' maxlength='80' placeholder="Describe the event in maximum 80 characters...")
+                label Date
+                input#date(type='date' name='date' required='' value=moment().format("YYYY-MM-DD"))
+                label Long Description
+                textarea#long-description(name='longDescription' required placeholder='Describe the event in detail...')
+                button#login-button(type='submit') Submit
+            a(href='/medical-events')
+                button#cancel-button Cancel   

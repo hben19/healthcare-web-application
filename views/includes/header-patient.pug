@@ -1,0 +1,15 @@
+link(rel="stylesheet" href="css/header.css")
+nav 
+    ul 
+        block links
+        li  
+            a(href="/" onclick=`return confirm("Would you like to close this account?");`) 
+                img(src="img/logo.png", id="logo")
+        li
+            a(href="/patient" class="float_left") Clinical Records
+        li 
+            a(href="/medical-events" class="float_left") Medical Events
+        li 
+            a(href="logout" class="float_right") Log Out
+        li 
+            a(href="newscan" class="float_right") New Scan

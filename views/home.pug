@@ -1,0 +1,48 @@
+extends layout
+
+block content
+    include includes/header
+    link(rel="stylesheet" href="css/home.css")
+    .container
+        .dashboard
+            h1.greeting Logged in as 
+                span=firstname
+                em 
+                span=surname
+            table
+                tr  
+                    td.left_column Your GMC Number:
+                    td.right_column
+                        span=gmc
+                tr  
+                    td.left_column Institution:
+                    td.right_column
+                        span=institution
+                tr
+                    td.left_column Specialty:
+                    td.right_column
+                        span=specialty
+                tr
+                    td.left_column Location:
+                    td.right_column
+                        span=location
+                tr
+                    td.left_column Email Address:
+                    td.right_column
+                        span=email
+                
+            a(href="/scan" id='scan-button')
+                button.button
+                    i.fa.fa-qrcode
+                    span Scan QR Code
+            a(href="/register-patient" id='register-button')
+                button.button
+                    i.fas.fa-user-plus
+                    span Register Patient
+    if(message.length > 0)
+        script(type='text/javascript').
+            $("document").ready( function () {
+                alert("Patient has been successfully registered. Confirmation email has been sent to the given email address.");
+            }); 
+            
+

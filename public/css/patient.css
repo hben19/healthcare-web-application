@@ -1,0 +1,231 @@
+body {
+    font-size: 19
+}
+.container {
+    max-width: 85%;
+    margin: 100 auto;
+    height: auto;
+    min-height: 80%;
+    background: transparent;
+    text-align: center;
+    color: #543332;
+    border:none;
+    border-radius: 0;
+    margin-bottom: 80px;
+}
+
+h3 {
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+
+}
+
+.profile-picture {
+    width: 100%;
+}
+
+.left_bar {
+    max-width: 35%;
+    text-align: left;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+.bottom_left {
+    background: white;
+    margin-top: 5px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.62), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.top_left {
+    background: white;
+    padding-bottom: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.62), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.left_bar h1 {
+    padding-top: 20px;
+    font-size: 23px;
+    text-align: center;
+    color: #0000008c;
+    text-transform: uppercase;
+}
+
+.address {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.personal_information {
+    margin-top: 30px;
+}
+
+.personal_information, .address{
+    margin-left: 10%;
+    margin-right: 10px;
+}
+
+.left_column {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.personal_information .left_column{
+    width: 40%;
+}
+
+.personal_information .right_column {
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.right_bar {
+    width: 60%;
+    float: right;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.88), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.top_right {
+    width: 100%;
+    background: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    display: inline-block;
+}
+
+.right_bar h3 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 24;
+}
+
+.top_right h3:last-child {
+    margin-bottom: 8;
+}
+
+.left_table {
+    width: 50%;
+    float: left;
+    margin-left: 40px;
+}
+
+.right_table {
+    display: inline;
+}
+
+.top_right .left_column {
+    font-size: 20px;
+    width: 120px;
+    font-weight: 600
+}
+
+.top_right .right_column {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.top_right tr {
+    height: 50px
+}
+
+
+.top_right a {
+    float: right;
+    margin-top: -50px;
+    text-decoration: none;
+    color: #8a0303;
+}
+
+.top_right a:hover{
+    text-decoration: underline;
+    color: #c70202;
+}
+
+.top_right a span {
+    margin-left: 5px;
+}
+
+.top_right table {
+    margin-bottom: 60px;
+}
+
+.medical_condition, .allergies, .prescriptions {
+    width: 100%;
+    background: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    display: inline-block;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.medical_condition p, .allergies p, .prescriptions p{
+    margin-bottom: 80px;
+    margin-left: 40px;
+    margin-right: 25px;
+    margin-top: 5px
+}
+
+.medical_condition h3, .allergies h3, .prescriptions h3{
+    margin-bottom: 5px;
+}
+
+.prescriptions {
+  padding-bottom: 30px;
+}
+
+.link {
+  float: left;
+}
+
+.link {
+  width: 100%;
+}
+
+.medical-events {
+  display: inline-block;
+  border-radius: 3px;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 19px;
+  padding: 14px;
+  width: 100%;
+  transition: 0.5s;
+  cursor: pointer;
+  margin: 20px auto;
+  margin-right: 30%;
+  background: white;
+  color: #bd0000;
+  font-size: 22px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.88), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.medical-events span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.medical-events span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.medical-events:hover span {
+  padding-right: 25px;
+}
+
+.medical-events:hover span:after {
+  opacity: 1;
+  right: 0;
+}

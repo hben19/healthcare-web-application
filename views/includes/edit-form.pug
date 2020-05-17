@@ -1,0 +1,31 @@
+form(method='post' action='/usr/344/records-updated')
+    .address
+        label Address
+        input(type='text' name='address_line1' required='' value=`${patient.address_line1}` placeholder='Address Line 1')
+        input(type='text' name='address_line2' value=`${patient.address_line2}` placeholder='Address Line 2')
+        input#country(type='text' name='country' required='' value=`${patient.country}` placeholder='Country')
+        input#city(type='text' name='city' required='' value=`${patient.city}` placeholder='City')
+        input#postcode(type='text' name='postcode' required='' value=`${patient.postcode}` placeholder='Postcode')
+    div
+        label Medical Condition
+        textarea(type='text' name='medical_condition' required='')=patient.medical_condition
+    label Allergies
+    textarea(type='text' name='allergies' required='')=patient.allergies
+    label Prescriptions
+    textarea(type='text' name='prescriptions' required='')=patient.prescriptions
+    .checks
+        .bpc
+            label Blood Pressure Check
+            input(type='number' name='systolic' required='' placeholder='Systolic' value=`${patient.systolic}`)
+            input(type='number' name='diastolic' required='' placeholder='Diastolic' value=`${patient.diastolic}`)
+        .hrc
+            label Heart Rate Check
+            input(type='number' name='heart_rate' placeholder='bpm' required='' value=`${patient.last_heart_rate}`)
+    .measures
+        .height
+            label Height
+            input(type='number' name='height' required='' placeholder='cm' value=`${patient.height}`)
+        .weight
+            label Weight
+            input(type='number' name='weight' required='' placeholder='kg' value=`${patient.weight}`)
+    button#register-button(type='submit') Submit

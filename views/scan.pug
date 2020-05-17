@@ -1,0 +1,20 @@
+extends layout 
+
+block content
+  include includes/header
+  .container
+    .dashboard
+      h1 Scan your patient's QR Code
+      if(message)
+        .error
+          p=message
+      video#preview
+      script(type='text/javascript' src='https://rawgit.com/schmich/instascan-builds/master/instascan.min.js')
+      script(type='text/javascript' src='js/jquery-3.4.1.min.js')
+      script(type='text/javascript' src='js/scan.js')
+      form(action='/scan-result' method='GET')
+        input#hiddenInput(type='hidden' name='keyword' value=" ")
+        input#submit(type='submit' value='OK')
+      h5 Please make sure you run the website with secure connection: 
+        br 
+        a.links(href='https://www.doc.gold.ac.uk/usr/344/scan') https://www.doc.gold.ac.uk/usr/344/scan

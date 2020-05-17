@@ -1,0 +1,44 @@
+extends layout
+
+block content
+    include includes/header-patient
+    link(rel="stylesheet" href="css/medical-events.css")
+    script(type='text/javascript' src='js/jquery-3.4.1.min.js')
+    script(type='text/javascript').
+        jQuery(document).ready(function($) {
+            $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+         });
+        });
+    .add-event
+        a(href='/add-medical-event')
+            button(type='button' id='add_button') Add Medical Event 
+                span(style='font-size:22px; font-weight:bold;') + 
+    .container
+            table
+                thead
+                        tr
+                            th.column1 Date
+                            th.column2 Short Description
+                            th.column3 Doctor
+                            th.column4 Event ID
+                            th.column5
+            if(medicalEvents.length != 0)
+                table
+                    tbody
+                        for item in medicalEvents
+                            tr.clickable-row(data-href=`medical-event?event_id=${item.event_id}`)
+                                td.column1=moment(item.date).format("DD-MM-YYYY")
+                                td.column2=item.short_description
+                                td.column3 #{item.firstname+ " " + item.surname}
+                                td.column4=item.event_id
+                                th.column5
+                                    a.edit(href=`edit-medical-event?event_id=${item.event_id}`)
+                                        i.fas.fa-pencil-alt
+                                        span Edit
+            else
+                .error
+                    h3 There are no available medical events yet. 
+                    h3 Click on add medical event button to add new entry.
+                                    
+                        

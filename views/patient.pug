@@ -1,0 +1,105 @@
+extends layout
+block content
+    include includes/header-patient
+    link(rel='stylesheet' href='css/patient.css')
+    .container
+        .left_bar
+            .top_left
+                h1  
+                    span=firstname
+                    em 
+                    span=surname
+                img(src=`img/users/profilePictures/${id}.jpg`, class="profile-picture")
+                .personal_information
+                    h3 Personal Information
+                    table
+                        tr
+                            td.left_column Medicode ID:
+                            td.right_column
+                                span=id
+                        tr
+                            td.left_column First name(s):
+                            td.right_column
+                                span=firstname
+                        tr
+                            td.left_column Surname:
+                            td.right_column
+                                span=surname
+                        tr
+                            td.left_column Email:
+                            td.right_column
+                                span=email
+                        tr
+                            td.left_column Date of Birth:
+                            td.right_column 
+                                span=moment(date_of_birth).format("DD/MM/YYYY")
+                        tr 
+                            td.left_column Gender:
+                            td.right_column 
+                                span=gender
+            .bottom_left
+                .address
+                    h3 Address
+                    p=address_line_1
+                    p=address_line_2
+                    p=country
+                    p=city
+                    span=postcode
+            .link
+                a(href='/medical-events')
+                    button.medical-events
+                        span Medical Events 
+        .right_bar
+            .top_right
+                h3 Clinical Records
+                a(href='edit-records')
+                    i.far.fa-edit
+                    span Edit
+                .left_table
+                    table
+                        tr
+                            td.left_column Blood Type:
+                            td.right_column
+                                span=blood_type
+                        tr
+                            td.left_column Systolic:
+                            td.right_column
+                                span #{systolic + ' mmHg'}
+                        tr
+                            td.left_column Diastolic
+                            td.right_column
+                                span #{diastolic + ' mmHg'}
+                        tr
+                            td.left_column Last Heart Rate Check:
+                            td.right_column
+                                span #{last_heart_rate + ' bpm'}
+                .right_table
+                    table   
+                        tr 
+                            td.left_column Height:
+                            td.right_column
+                                span #{height + " cm" }
+                        tr 
+                            td.left_column Weight:
+                            td.right_column 
+                                span #{weight + " kg" }
+                        tr 
+                            td.left_column Smoker:
+                            if(smoker==0)
+                                td.right_column No
+                            else
+                                td.right_column Yes
+                        tr 
+                            td.left_column GP GMC Number:
+                            td.right_column
+                                span=gpGmc
+                h3 Medical Condition
+            .medical_condition
+                p=medical_condition
+                h3 Allergies
+            .allergies
+                p=allergies
+                h3 Prescriptions
+            .prescriptions
+                p=prescriptions
+            

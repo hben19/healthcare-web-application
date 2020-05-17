@@ -1,0 +1,62 @@
+body {
+    font-size: 20px;
+  }
+  
+  .container {
+    text-align: left;
+    color: #690000;
+  }
+  
+  .dashboard {
+    margin: 70px 17%
+  }
+  
+  .edit {
+    float: right;
+  }
+  
+  span {
+    margin-left: 10px;
+  }
+  
+  label {
+    font-weight: 100;
+  }
+  
+  .doctor span {
+    display: block;
+    margin-left: 0;
+  }
+
+  .date {
+    margin-bottom: 20px
+  }
+
+  .doctor {
+    margin-bottom: 20px;
+  }
+
+  .short_description, .long_description {
+    margin-bottom: 20px;
+  }
+
+  .edit a {
+    text-decoration: none;
+    color: #aa4143;
+  }
+
+  .edit a:hover {
+    text-decoration: underline;
+    color: #e3484f;
+  }
+
+  .long_description p {
+    margin-top: 8px;
+    margin-left: 5px
+  }
+  
+  .short_description p {
+    margin-top: 8px;
+    margin-left: 5px
+  }
+  
